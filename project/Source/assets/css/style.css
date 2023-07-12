@@ -1,0 +1,242 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+
+}
+
+body {
+    font-family: Helvetica, sans-serif;
+    font-weight: bold;
+    overflow-y: auto;
+    height: 97.7vh;
+    background-image: linear-gradient(220deg, #BF3BA9, #730DD9, #3D0773, #220440);
+}
+
+.final_project {
+    position: relative;
+}
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    height: 46px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar__title-link{
+    font-size: 35px;
+    color: #ffffff;
+    text-decoration: none;
+    margin-left: -30px;
+    font-family: Fantasy;
+}
+
+.navbar__item-link {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.navbar__title-letter {
+    font-size: 17px;
+    font-weight: 500;
+    list-style: none;
+    line-height: 46px;
+    margin-left: 40px;
+}
+
+.navbar__list {
+    list-style-type: none;
+}
+
+.navbar__list,
+.navbar__title,
+.navbar__item,
+.navbar__title-link,
+.navbar__item-link {
+    display: inline-block;
+}
+
+.navbar__list {
+    line-height: 46px;
+    margin-right: 8px;
+}
+
+.navbar__item {
+    position: relative;
+}
+
+.navbar__item-link {
+    font-size: 17px;
+    padding: 0 32px;
+    width: 100%;
+}
+
+.navbar__item:hover .navbar__item-link {
+    cursor: pointer;
+    background-color: #eed1ff;
+    color: #000;
+}
+
+.navbar__item:hover .navbar__subnav {
+    display: block;
+}
+
+.fa-sort-down:before {
+    margin: 3px;
+    font-size: 20px;
+}
+
+.navbar__subnav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    box-shadow: 0 0 4px rgba(33, 32, 32, 0.3);
+    list-style-type: none;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    animation: FadeIn ease 1s;
+}
+
+.navbar__subnav_one {
+    width: 166px;
+}
+.navbar__subnav_two {
+    min-width: 128px;
+}
+
+.navbar__subnav_three {
+    min-width: 131.18px;
+}
+
+.navbar__subnav_four {
+    min-width: 148px;
+}
+.navbar__subnav_five {
+    width: 170px;
+}
+.navbar__subnav_six {
+    width: 187px;
+}
+
+.navbar__subnav-item {
+    height: 30px;
+    position: relative;
+}
+
+.subnav-item__link {
+    text-decoration: none;
+    position: absolute;
+    display: inline-block;
+    width: 100%;
+    color: black;
+    line-height: 30px;
+    padding: 0 16px;
+    font-size: 15px;
+}
+
+.navbar__subnav-item:hover .subnav-item__link {
+    cursor: pointer;
+    color: #000;
+    background-color: #eed1ff;
+}
+
+.navbar__subnav-item:last-child:hover .subnav-item__link {
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+@keyframes FadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* WebGL */
+canvas {
+    position: relative;
+    top: 46px;
+}
+
+.WebGL__controls {
+    position: absolute;
+    z-index: 1;
+    top: 50px;
+    left: 12px;
+    width: 170px;
+    height: 190px;
+}
+
+.controls-object,
+.controls-music {
+    display: flex;
+    padding: 8px 0;
+}
+
+.controls-btn,
+.controls-music-btn {
+    width: 32px;
+    height: 32px;
+    background-color: #4B0082;
+    text-align: center;
+    border-radius: 20px;
+    border: 1px solid #4B0082;
+}
+
+.controls-btn:hover,
+.controls-music-btn:hover {
+    cursor: pointer;
+    background-color: #fff;
+}
+
+.controls-btn i,
+.controls-music-btn i {
+    line-height: 32px;
+    font-size: 12px;
+    color: #fff;
+}
+
+.controls-btn:hover i,
+.controls-music-btn:hover i {
+    line-height: 32px;
+    font-size: 12px;
+    color: #15151e;
+}
+
+.controls-btn.active,
+.controls-music-btn.active {
+    background-color: #fff;
+}
+
+.controls-btn.active i,
+.controls-music-btn.active i {
+    color: #15151e;
+}
+
+.controls-desc,
+.controls-music-desc {
+    color: #333;
+    line-height: 32px;
+    margin-left: 8px;
+}
+
+#GUI {
+    position: relative;
+    top: 46px;
+}
+input[type='file'] {
+    color: transparent;
+    margin-left: 30px;
+  }

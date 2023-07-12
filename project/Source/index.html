@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Simple 3D Simulator</title>
+        <link rel="stylesheet" href="./assets/css/style.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="./assets/font/fontawesome-free-5.15.4-web/css/all.min.css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <div class="final_project">
+            <header class="header">
+                <div class="navbar">
+                    <ul class="navbar__title">
+                        <li class="navbar__title-letter"><a href="" class="navbar__title-link">SIMPLE 3D SIMULATOR</a></li>
+                    </ul>
+                    <ul class="navbar__list">
+                        <li class="navbar__item">
+                            <a href="#" class="navbar__item-link">
+                                Geometry
+                                <i class="fas fa-sort-down"></i>
+                            </a>
+                            <ul class="navbar__subnav navbar__subnav_one">
+                                <li class="navbar__subnav-item">
+                                    <a href="#" class="subnav-item__link geometry">Box</a>
+                                </li>
+                                <li class="navbar__subnav-item">
+                                    <a href="#" class="subnav-item__link geometry">Sphere</a>
+                                </li>
+                                <li class="navbar__subnav-item">
+                                    <a href="#" class="subnav-item__link geometry">Cone</a>
+                                </li>
+                                <li class="navbar__subnav-item">
+                                    <a href="#" class="subnav-item__link geometry">Cylinder</a>
+                                </li>
+                                <li class="navbar__subnav-item">
+                                    <a href="#" class="subnav-item__link geometry">Torus</a>
+                                </li>
+                                <li class="navbar__subnav-item">
+                                    <a href="#" class="subnav-item__link geometry">Teapot</a>
+                                </li>
+                                <li class="navbar__subnav-item">
+                                    <a href="#" class="subnav-item__link geometry">Torus Knot</a>
+                                </li>
+                                <li class="navbar__subnav-item">
+                                    <a href="#" class="subnav-item__link geometry">Tetrahedron</a>
+                                </li>
+                                <li class="navbar__subnav-item">
+                                    <a href="#" class="subnav-item__link geometry">Octahedron</a>
+                                </li>
+                                <li class="navbar__subnav-item">
+                                    <a href="#" class="subnav-item__link geometry">Dodecahedron</a>
+                                </li>
+                                <li class="navbar__subnav-item">
+                                    <a href="#" class="subnav-item__link geometry">Icosahedron</a>
+                                </li>
+                                <li class="navbar__subnav-item">
+                                    <a href="#" class="subnav-item__link geometry">Tube</a>
+                                </li>
+                                <li class="navbar__subnav-item">
+                                    <a href="#" class="subnav-item__link geometry">Heart</a>
+                                </li>
+                                <li class="navbar__subnav-item">
+                                    <label for="uploadGeometry" class="subnav-item__link">Upload Geometry</label>
+                                    <input type="file" id="uploadGeometry" accept=".glb,.gltf" style="display: none">
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="navbar__item">
+                            <a href="#" class="navbar__item-link">
+                                Style
+                                <i class="fas fa-sort-down"></i>
+                            </a>
+                            <ul class="navbar__subnav navbar__subnav_two">
+                                <li class="navbar__subnav-item">
+                                    <a href="#" class="subnav-item__link surface">Point</a>
+                                </li>
+                                <li class="navbar__subnav-item">
+                                    <a href="#" class="subnav-item__link surface">Line</a>
+                                </li>
+                                <li class="navbar__subnav-item">
+                                    <a href="#" class="subnav-item__link surface">Solid</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="navbar__item">
+                            <a href="#" class="navbar__item-link">
+                                Light
+                                <i class="fas fa-sort-down"></i>
+                            </a>
+                            <ul class="navbar__subnav navbar__subnav_three">
+                                <li class="navbar__subnav-item">
+                                    <a href="#" class="subnav-item__link light">Point Light</a>
+                                </li>
+                                <li class="navbar__subnav-item">
+                                    <a href="#" class="subnav-item__link light">Spot Light</a>
+                                </li>
+                                <li class="navbar__subnav-item">
+                                    <a href="#" class="subnav-item__link light">Remove Light</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="navbar__item">
+                            <a href="#" class="navbar__item-link">
+                                Texture
+                                <i class="fas fa-sort-down"></i>
+                            </a>
+                            <ul class="navbar__subnav navbar__subnav_four">
+                                <li class="navbar__subnav-item">
+                                    <a href="#" class="subnav-item__link surface">Weave</a>
+                                </li>
+                                <li class="navbar__subnav-item">
+                                    <a href="#" class="subnav-item__link surface">Floor wood</a>
+                                </li>
+                                <li class="navbar__subnav-item">
+                                    <a href="#" class="subnav-item__link surface">Grasslight</a>
+                                </li>
+                                <li class="navbar__subnav-item">
+                                    <a href="#" class="subnav-item__link surface">Stone</a>
+                                </li>
+                                <li class="navbar__subnav-item">
+                                    <a href="#" class="subnav-item__link surface">Plaster</a>
+                                </li>
+                                <li class="navbar__subnav-item">
+                                    <a href="#" class="subnav-item__link surface">Water</a>
+                                </li>
+                                <li class="navbar__subnav-item">
+                                    <a href="#" class="subnav-item__link surface">Satin</a>
+                                </li>
+                                <li class="navbar__subnav-item">
+                                    <a href="#" class="subnav-item__link surface">Spiral</a>
+                                </li>
+                                <li class="navbar__subnav-item">
+                                    <a href="#" class="subnav-item__link surface">Triangle</a>
+                                </li>
+                                <li class="navbar__subnav-item">
+                                    <input type="file" id="texture-input" style="display: none" accept="image/*">
+                                    <a href="#" id="upload-texture-btn" class="subnav-item__link surface">Upload Texture</a>
+                                </li>
+                                <li class="navbar__subnav-item">
+                                    <a href="#" class="subnav-item__link surface">Remove Texture</a>
+                                </li>
+                                
+                            </ul>
+                        </li>
+                        <li class="navbar__item">
+                            <a href="#" class="navbar__item-link">
+                                Animation
+                                <i class="fas fa-sort-down"></i>
+                            </a>
+                            <ul class="navbar__subnav navbar__subnav_five">
+                                <li class="navbar__subnav-item">
+                                    <a href="#" class="subnav-item__link animation">3_dim rotation</a>
+                                </li>
+                                <li class="navbar__subnav-item">
+                                    <a href="#" class="subnav-item__link animation">Bounce</a>
+                                </li>
+                                <li class="navbar__subnav-item">
+                                    <a href="#" class="subnav-item__link animation">3_dim scaling</a>
+                                </li>
+                                <li class="navbar__subnav-item">
+                                    <a href="#" class="subnav-item__link animation">Remove Animation</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="navbar__item">
+                            <a href="#" class="navbar__item-link">
+                                Background
+                                <i class="fas fa-sort-down"></i>
+                            </a>
+                            <ul class="navbar__subnav navbar__subnav_six">
+                                <li class="navbar__subnav-item">
+                                    <a href="#" class="subnav-item__link background">Square Point</a>
+                                </li> 
+                                <li class="navbar__subnav-item">
+                                    <a href="#" class="subnav-item__link background">Colorful Point</a>
+                                </li> 
+                                <li class="navbar__subnav-item">
+                                    <a href="#" class="subnav-item__link background">Cloudy Sky</a>
+                                </li>   
+                                <li class="navbar__subnav-item">
+                                    <a href="#" class="subnav-item__link background">Remove Background</a>
+                                </li>                              
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="final_project-audio">
+                    <audio id="audio" src="./assets/audio/Reality.mp3" loop></audio>
+                </div>
+            </header>
+            <div id="WebGL">
+                <div class="WebGL__controls">
+                    <div class="controls-object">
+                        <div class="controls-btn" type="translate">
+                            <i class="fas fa-arrows-alt"></i>
+                        </div>
+                        <span class="controls-desc"> Translate </span>
+                    </div>
+                    <div class="controls-object">
+                        <div class="controls-btn" type="rotate">
+                            <i class="fas fa-sync-alt"></i>
+                        </div>
+                        <span class="controls-desc"> Rotate </span>
+                    </div>
+                    <div class="controls-object">
+                        <div class="controls-btn" type="scale">
+                            <i class="fas fa-expand-arrows-alt"></i>
+                        </div>
+                        <span class="controls-desc"> Scale  </span>
+                    </div>
+                    <div class="controls-music">
+                        <div class="controls-music-btn" type="music">
+                            <i class="fas fa-music"></i>
+                        </div>
+                        <span class="controls-music-desc"> Music </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script src="./assets/lib/three.js"></script>
+    <script src="./assets/lib/OrbitControls.js"></script>
+    <script src="./assets/lib/TransformControls.js"></script>
+    <script src="./assets/lib/TrackballControls.js"></script>
+    <script src="./assets/lib/dat.gui.min.js"></script>
+    <script type="module" src="./assets/lib/GLTFLoader.js"></script>
+    <script src="./assets/lib/Stats.js"></script>
+    <script src="./assets/lib/TeapotGeometry.js"></script>
+    <script src="./main.js" type="module">
+        import * as THREE from "./assets/lib/three";
+        import {OrbitControls} from "./assets/lib/OrbitControls.js";
+        import {TransformControls} from "./assets/lib/TransformControls.js";
+        import {TrackballControls} from "./assets/lib/TrackballControls.js";
+        import {GLTFLoader} from "./assets/lib/GLTFLoader.js";
+        import {Stats} from "./assets/lib/Stats.js";
+    </script>
+</html>
