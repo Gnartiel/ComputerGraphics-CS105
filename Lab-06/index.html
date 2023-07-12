@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Three.js</title>
+    <style type="test/css">
+        html, body {margin:0;padding:0;overflow:hidden}
+    </style>
+
+</head>
+
+<body>
+
+    <div id="webgl"></div>
+    <!-- <script src="https://unpkg.com/@tweenjs/tween.js@^20.0.0/dist/tween.umd.js"></script> -->
+    <script async src="https://unpkg.com/es-module-shims@1.6.3/dist/es-module-shims.js"></script>
+
+    <script type="importmap">
+        { "imports": { "three": "https://unpkg.com/three@v0.150.1/build/three.module.js", "three/addons/": "https://unpkg.com/three@v0.150.1/examples/jsm/"}}
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.7.7/dat.gui.min.js "></script>
+    <script src="./Tween.min.js"></script>
+    <script src="./perlin.js "></script>
+    <script type="module" src="/texture.js"></script>
+</body>
+
+</html>
+<!-- "@tweenjs/tween.js": "/node_modules/@tweenjs/tween.js/dist/tween.esm.js" -->

@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.33423.256
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Raster", "Raster\Raster.vcxproj", "{6E7A96E9-99D9-4BD5-ADC6-0E7E61E258AF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6E7A96E9-99D9-4BD5-ADC6-0E7E61E258AF}.Debug|x64.ActiveCfg = Debug|x64
+		{6E7A96E9-99D9-4BD5-ADC6-0E7E61E258AF}.Debug|x64.Build.0 = Debug|x64
+		{6E7A96E9-99D9-4BD5-ADC6-0E7E61E258AF}.Debug|x86.ActiveCfg = Debug|Win32
+		{6E7A96E9-99D9-4BD5-ADC6-0E7E61E258AF}.Debug|x86.Build.0 = Debug|Win32
+		{6E7A96E9-99D9-4BD5-ADC6-0E7E61E258AF}.Release|x64.ActiveCfg = Release|x64
+		{6E7A96E9-99D9-4BD5-ADC6-0E7E61E258AF}.Release|x64.Build.0 = Release|x64
+		{6E7A96E9-99D9-4BD5-ADC6-0E7E61E258AF}.Release|x86.ActiveCfg = Release|Win32
+		{6E7A96E9-99D9-4BD5-ADC6-0E7E61E258AF}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {082ACE42-C2B8-4D26-9CAC-4BD207D88D8B}
+	EndGlobalSection
+EndGlobal
